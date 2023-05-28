@@ -1,0 +1,21 @@
+.top-menu_bg_color {
+    background-color: #343a40;
+}
+
+.main-title-bg-color {
+    background-color: #e9ecef;
+}
+
+.main_title {
+    font-size: 40px;
+}
+
+.card-bg-color {
+    background-color: #cccccc;
+}
+
+.card {
+    background-color: grey;
+    height: 200px;
+    width: 150px;
+}

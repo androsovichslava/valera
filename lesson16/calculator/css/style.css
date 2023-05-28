@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.wrapper,
+.container,
+header,
+main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    /* align-items: end; */
+
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+header {
+    background-color: red;
+    color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+.price_block,
+.auction_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.auction_select,
+.price,
+#engine_volume_input,
+#engine_power_input {
+    width: 300px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    /* box-shadow: 2px 1px 1px 1px #aaa; */
+}
+
+.auction_label,
+.price_label {
+    margin: 20px;
+}
+
+.service_block,
+.fuel_block,
+.engine_volume_block,
+.engine_power_block,
+.age_block,
+.owner_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.service_type_radio_block,
+.fuel_type_radio_block,
+.age_radio_block,
+.owner_radio_block {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.service_type_radio_block label,
+.fuel_type_radio_block label,
+.engine_volume_block label,
+.engine_power_block label,
+.age_radio_block label,
+.owner_radio_block label {
+    padding: 0 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.button_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 20px;
+}
+
+.button_case {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 300px;
+}
+
+.calculate {
+    padding: 15px 20px;
+    background-color: red;
+    border-radius: 4px;
+}

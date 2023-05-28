@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form__input:invalid {
+            border: 1px solid red;
+            /* красная рамка для некорректных данных */
+        }
+
+        .form__input:valid {
+            border: 1px solid green;
+            /* зелёная — для корректных */
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="genres">
+        <option value="rock">Рок</option>
+        <option value="blues" selected>Блюз</option>
+    </select>
+
+    <style>
+        #genres {
+            margin: 50px 50%;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+    </style>
+    <form action="#" class="form">
+        <input type="text" name="name" placeholder="Имя" />
+        <input type="email" name="email" placeholder="E-Mail" />
+        <input type="tel" name="phone" placeholder="Телефон" />
+        <input type="url" name="url" placeholder="Ваш сайт" />
+        <input type="number" name="growth" placeholder="Ваш рост" />
+        <button type="button">Отправить</button>
+    </form>
+    <script>
+        let select = document.querySelector("#genres");
+        select.addEventListener("change", function () {
+            console.log(this.options[this.selectedIndex].value)
+            console.log(this.options[this.selectedIndex].innerHTML)
+            console.log(this)
+        })
+    </script>
+</body>
+
+</html>

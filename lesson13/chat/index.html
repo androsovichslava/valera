@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Чат бокс</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title1">Сервис комментариев со спам фильтром</div>
+        <div class="container">
+            <div class="left_box">
+                <div class="title2">Оставьте ваш комментарий</div>
+                <div class="radio_block">
+                    <p>Показывать ваше имя?</p>
+                    <label for="checkbox1" class="label">
+                        <span class="text">Yes</span>
+                        <input type="radio" name="button" id="checkbox1" checked>
+                        <span class="fake"></span>
+                    </label>
+
+                    <label for="checkbox2" class="label">
+                        <span class="text">No</span>
+                        <input type="radio" name="button" id="checkbox2">
+                        <span class="fake"></span>
+                    </label>
+                </div>
+                <label for="fio">Введите ваше ФИО:</label>
+                <input type="text" id="fio" placeholder="Введите имя, фамилию">
+                <label for="avatar">Введите ссылку вашего аватара :</label>
+                <input type="text" id="avatar" placeholder="Введите аватар">
+                <label for="comment_edit">Оставьте комментарий</label>
+
+                <textarea name="" id="comment_edit" cols="30" rows="10" placeholder="Оставьте комментарий"></textarea>
+                <button id="btn1">Отправить</button>
+            </div>
+            <div class="right_box">
+                <div class="title2">Чат</div>
+                <div id="comments_container">
+                    <div class="single_comment">
+                        <div class="avatar_fio_box">
+                            <img src="https://omoro.ru/wp-content/uploads/2018/05/prikilnie-kartinki-na-avatarky-dlia-devyshek-51.jpg"
+                                alt="">
+                            <p class="title3">Дунька Пистолетова</p>
+                            <p class="comment_date">Дата и время комментария</p>
+                        </div>
+                        <p class="message_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae,
+                            exercitationem ipsum ullam obcaecati deserunt rerum qui repudiandae atque, a, odit eveniet
+                            fuga enim laudantium illo culpa perferendis modi nobis quis.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

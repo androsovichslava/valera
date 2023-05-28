@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.image_box {
+    margin: 0 auto;
+}
+
+img {
+    width: 500px;
+}
+
+.btn_box {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+}

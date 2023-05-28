@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>Калькулятор стоимости авто</header>
+            <main>
+                <form action="">
+                    <div class="price_block">
+                        <label for="price" class="price_label">Цена на аукционе</label>
+                        <input type="text" name="price" class="price" placeholder="">
+                    </div>
+                    <div class="auction_block">
+                        <label for="" class="auction_label">Аукцион</label>
+                        <select name="auction_select" id="auction_select" class="auction_select">
+                            <option value="tokyo">USS TOKYO</option>
+                            <option value="shizuoka">USS SHIZUOKA</option>
+                            <option value="yokohama">USS YOKOHAMA</option>
+                        </select>
+
+                    </div>
+                    <div class="service_block">
+                        <label for="" class="surve_type_title">Тип услуги</label>
+                        <div class="service_type_radio_block">
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio" checked> Целый
+                                автомобиль
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Целый автомобиль
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Распил легковой
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Распил рамный
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Конструктор
+                                легковой
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Конструктор джип
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio"> Запчасти на палете
+                            </label>
+                        </div>
+                    </div>
+                    <div class="fuel_block">
+                        <label for="" class="fuel_type_title">Тип топлива</label>
+                        <div class="fuel_type_radio_block">
+                            <label for="fuel_type" class="fuel_type_label">
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio" checked> бензин
+                                (включая гибрид)
+                            </label>
+                            <label for="fuel_type" class="fuel_type_label">
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio"> дизельное топливо
+                            </label>
+                            <label for="fuel_type" class="fuel_type_label">
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio"> электрический
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="engine_volume_block">
+                        <label for="engine_volume_input">Объем двигателя</label>
+                        <input type="text" name="engine_volume_input" id="engine_volume_input" placeholder="">
+                    </div>
+                    <div class="engine_power_block">
+                        <label for="engine_power_input">Мощность двигателя</label>
+                        <input type="text" name="engine_power_input" id="engine_power_input" placeholder="">
+                    </div>
+
+
+                    <div class="age_block">
+                        <label for="" class="age_title">Возраст автомобиля</label>
+                        <div class="age_radio_block">
+                            <label for="age" class="age_label">
+                                <input type="radio" name="age" id="" class="age" checked> Меньше 3 лет
+                            </label>
+                            <label for="age" class="age_label">
+                                <input type="radio" name="age" id="" class="age"> От 3 до 5 лет
+                            </label>
+                            <label for="age" class="age_label">
+                                <input type="radio" name="age" id="" class="age"> От 5 до 7 лет
+                            </label>
+                            <label for="age" class="age_label">
+                                <input type="radio" name="age" id="" class="age"> Больше 7 лет
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="owner_block">
+                        <label for="" class="owner_title">Возраст автомобиля</label>
+                        <div class="owner_radio_block">
+                            <label for="owner" class="owner_label">
+                                <input type="radio" name="owner" id="" class="owner" checked> Физическое лицо
+                            </label>
+                            <label for="owner" class="owner_label">
+                                <input type="radio" name="owner" id="" class="owner"> Юридическое лицо
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="button_block">
+                        <div class="button_case">
+                            <button class="calculate">
+                                Рассчитать
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+            <footer></footer>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

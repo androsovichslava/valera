@@ -1,0 +1,70 @@
+<div class="checkbox-container">
+    <input type="checkbox" id="checkbox" />
+    <label for="checkbox" class="checkbox-label"></label>
+</div>
+
+<style>
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox-label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .checkbox-label::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        transform: rotate(45deg) translate(-50%, -50%);
+    }
+
+    #checkbox {
+        display: none;
+    }
+
+    #checkbox:checked+.checkbox-label {
+        background-color: #a9e18f;
+    }
+</style>
+
+<script>
+    const checkbox = document.getElementById("checkbox");
+    const label = document.querySelector(".checkbox-label");
+
+    checkbox.addEventListener("change", function () {
+        if (this.checked) {
+            label.style.backgroundColor = "#a9e18f";
+            label.style.border = "none";
+            label.style.boxShadow = "inset 0px -1px 2px rgba(0,0,0,0.1)";
+            label.style.transition = "all 0.3s";
+            label.style.transform = "scale(1.1)";
+            label.style.color = "white";
+            label.style.fontWeight = "bold";
+            label.textContent = "✔";
+            label.style.textAlign = "center";
+            label.style.lineHeight = "20px";
+            label.style.fontSize = "14px";
+            label.style.fontFamily = "Arial, sans-serif";
+            label.style.userSelect = "none";
+            label.style.cursor = "pointer";
+        } else {
+            label.style.backgroundColor = "white";
+            label.style.border = "1px solid black";
+            label.style.boxShadow = "none";
+            label.style.transition = "all 0.3s";
+            label.style.transform = "scale(1)";
+            label.textContent = "";
+            label.style.cursor = "pointer";
+        }
+    });
+</script>
