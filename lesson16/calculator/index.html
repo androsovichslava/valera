@@ -14,7 +14,7 @@
         <div class="container">
             <header>Калькулятор стоимости авто</header>
             <main>
-                <form action="">
+                <form action="" name="form1">
                     <div class="price_block">
                         <label for="price" class="price_label">Цена на аукционе</label>
                         <input type="text" name="price" class="price" placeholder="">
@@ -32,27 +32,31 @@
                         <label for="" class="surve_type_title">Тип услуги</label>
                         <div class="service_type_radio_block">
                             <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio" checked> Целый
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="1" checked>
+                                Целый
                                 автомобиль
                             </label>
+
                             <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Целый автомобиль
-                            </label>
-                            <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Распил легковой
-                            </label>
-                            <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Распил рамный
-                            </label>
-                            <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Конструктор
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="2"> Распил
                                 легковой
                             </label>
                             <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Конструктор джип
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="3"> Распил
+                                рамный
                             </label>
                             <label for="full_car" class="service_type_label">
-                                <input type="radio" name="full_car" id="" class="service_type_radio"> Запчасти на палете
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="4">
+                                Конструктор
+                                легковой
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="5">
+                                Конструктор джип
+                            </label>
+                            <label for="full_car" class="service_type_label">
+                                <input type="radio" name="full_car" id="" class="service_type_radio" value="6"> Запчасти
+                                на палете
                             </label>
                         </div>
                     </div>
@@ -60,14 +64,17 @@
                         <label for="" class="fuel_type_title">Тип топлива</label>
                         <div class="fuel_type_radio_block">
                             <label for="fuel_type" class="fuel_type_label">
-                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio" checked> бензин
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio" value="1" checked>
+                                бензин
                                 (включая гибрид)
                             </label>
                             <label for="fuel_type" class="fuel_type_label">
-                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio"> дизельное топливо
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio" value="2"> дизельное
+                                топливо
                             </label>
                             <label for="fuel_type" class="fuel_type_label">
-                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio"> электрический
+                                <input type="radio" name="fuel_type" id="" class="fuel_type_radio" value="3">
+                                электрический
                             </label>
 
                         </div>
@@ -86,16 +93,16 @@
                         <label for="" class="age_title">Возраст автомобиля</label>
                         <div class="age_radio_block">
                             <label for="age" class="age_label">
-                                <input type="radio" name="age" id="" class="age" checked> Меньше 3 лет
+                                <input type="radio" name="age" id="" class="age" value="1" checked> Меньше 3 лет
                             </label>
                             <label for="age" class="age_label">
-                                <input type="radio" name="age" id="" class="age"> От 3 до 5 лет
+                                <input type="radio" name="age" id="" class="age" value="2"> От 3 до 5 лет
                             </label>
                             <label for="age" class="age_label">
-                                <input type="radio" name="age" id="" class="age"> От 5 до 7 лет
+                                <input type="radio" name="age" id="" class="age" value="3"> От 5 до 7 лет
                             </label>
                             <label for="age" class="age_label">
-                                <input type="radio" name="age" id="" class="age"> Больше 7 лет
+                                <input type="radio" name="age" id="" class="age" value="4"> Больше 7 лет
                             </label>
                         </div>
                     </div>
@@ -104,10 +111,10 @@
                         <label for="" class="owner_title">Возраст автомобиля</label>
                         <div class="owner_radio_block">
                             <label for="owner" class="owner_label">
-                                <input type="radio" name="owner" id="" class="owner" checked> Физическое лицо
+                                <input type="radio" name="owner" id="" class="owner" value="1" checked> Физическое лицо
                             </label>
                             <label for="owner" class="owner_label">
-                                <input type="radio" name="owner" id="" class="owner"> Юридическое лицо
+                                <input type="radio" name="owner" id="" class="owner" value="2"> Юридическое лицо
                             </label>
 
                         </div>

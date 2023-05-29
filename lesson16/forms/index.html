@@ -48,6 +48,10 @@
     </form>
     <script>
         let select = document.querySelector("#genres");
+        let button = document.querySelector("button");
+        let form = document.querySelector("form")
+        button.addEventListener("click", e => form.submit());
+
         select.addEventListener("change", function () {
             console.log(this.options[this.selectedIndex].value)
             console.log(this.options[this.selectedIndex].innerHTML)
