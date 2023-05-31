@@ -144,3 +144,160 @@ console.log(res);
 str = '[abc] {abc} abc (abc) [abc]';
 res = str.replace(/[\[\{\(][a-z]+[\]\}\)]/g, '!');
 console.log(res);
+
+str = '^xx axx ^zz bkk @ss';
+res = str.replace(/[\^@][a-z]{2}/g, '!');
+console.log(res);
+
+str = '^xx axx ^zz bkk @ss';
+res = str.replace(/[^\^@\s][a-z]{2}/g, '!');
+console.log(res);
+
+str = 'aaaa aaaa aaaa';
+res = str.replace(/^aaaa/g, '!');
+console.log(res);
+
+str = 'aaaa aaaa aaaa';
+res = str.replace(/^..../g, '!');
+console.log(res);
+
+str = 'aaa bbb abb';
+res = str.replace(/a{3}|b{3}/g, '!');
+console.log(res);
+
+str = 'aeeea aeea aea axa axxa axxxa atttta';
+res = str.replace(/a(e+|x+)a/g, '!');
+console.log(res);
+
+console.log(/a+/.test("aaa"));
+console.log(/^http:\/\//.test("http://akim.zp.ua"));
+console.log(/txt$|html$|php$/.test("slava.txt"));
+console.log(/txt$|html$|php$/.test("slava.jpg"));
+console.log(/txt$|html$|php$/.test("slava.php"));
+
+
+console.log(/jpg$|jpeg$/.test("slava.jpg"));
+console.log(/jpg$|jpeg$/.test("slava.jpgd"));
+console.log(/jpg$|jpeg$/.test("slava.jpg"));
+
+
+console.log(/^\d{4}\-\d{2}\-\d{2}$/.test("1970-05-22"));
+console.log(/^\d{4}.\d{2}.\d{2}$/.test("1970.05.22"));
+
+
+console.log(/^[a-zA-Z.]+\@[a-zA-Z.]+$/.test("slava@ukr.net"));
+console.log(/^[a-zA-Z.]+\@[a-zA-Z.]+$/.test("slava@@ukr.net"));
+
+
+
+console.log(/^([a-zA-Z]+(-[a-zA-Z]+)+\.)[a-zA-Z]{2}$/.test("slava-ukr.net"));
+console.log(/^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/.test("slava-ukr.net"));
+
+
+str = 'a aa aaa aaaa';
+res = str.match(/a{3,}/g);
+console.log(res)
+
+str = 'site.ru sss site.com zzz site.net';
+res = str.match(/[a-z]+\.[a-z]+/g);
+console.log(res)
+
+str = 'a1b c34d x567z';
+res = str.match(/\d/g);
+console.log(res.reduce((a, e) => {
+    return Number(a) + Number(e);
+}, 0))
+
+str = 'sss xaaa-bbbx zzz';
+res = str.match(/x(a+)-(b+)x/);
+console.log(res)
+
+str = 'sss domain.ru zzz';
+res = str.match(/(\w+)\.(\w+)/);
+console.log(res)
+
+
+str = '31.12.2025';
+res = str.match(/(\d+)\.(\w+).(\w+)/);
+console.log(res)
+
+str = '31.12.2025';
+res = str.replace(/(\d+)\.(\w+).(\w+)/, '($1) ($2) ($3)');
+console.log(res)
+
+str = '31.12.2025';
+res = str.replace(/(\d+)\.(\w+).(\w+)/, '$3.$2.$1');
+console.log(res)
+
+str = '12 34 56 78';
+res = str.replace(/(\d)(\d)/g, '$2$1');
+console.log(res)
+
+str = "12 34 56 78";
+res = str.matchAll(/(\d)(\d)/g);
+for (let m of res) {
+
+    console.log(m)
+}
+
+
+str = '12:37 15:48 17:59';
+res = str.matchAll(/(\d+):(\d+)/g);
+for (let m of res) {
+
+    console.log(m)
+}
+
+str = 'site.ru sss site.com zzz site.net';
+res = str.matchAll(/(\w+)\.(\w+)/g);
+for (let m of res) {
+
+    console.log(m)
+}
+
+str = "12:37:34 15:48:55 13:55:34"
+let reg = /(\d\d):(\d\d):(\d\d)/g;
+while (res = reg.exec(str)) {
+    console.log(res)
+}
+
+
+console.log("---------------------------------------------------------------------")
+str = '12:37 15:48 17:59';
+
+reg = /(\d+)\:(\d+)/g;
+res = str.replace(reg, match => {
+    console.log(match)
+    return match
+});
+console.log(res)
+
+str = 'aaa [2] bbb [3] ccc [12] ddd';
+res = str.replace(/(\d+)/g, match => {
+    console.log(match)
+    return Number(match) * 2;
+})
+console.log(res)
+
+str = '123 456 789';
+res = str.replace(/(\d+)/g, match => {
+    console.log(match)
+
+    return match.split('').reverse().join('');
+})
+console.log(res)
+console.log("---------------------------------------------------------------------")
+str = '31.12.2025 30.11.2024 29.10.2023';
+res = str.replace(/(\d+\.\d+.\d+)/g, match => {
+    return match.replace(/(\d+)\.(\d+)\.(\d+)/g, "$3-$2-$1")
+    console.log(match)
+
+    // return match.split('').reverse().join('');
+})
+console.log(res)
+
+console.log("---------------------------------------------------------------------")
+str = 'sss site.ru zzz site.com kkk';
+res = str.replace(/(w+\.w+)/g, match => {
+    console.log(match)
+})
