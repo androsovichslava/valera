@@ -121,3 +121,26 @@ str = '1a2 xbz x1z xС2 1s2 xrrrr2';
 res = str.replace(/x[^2-7]+2/g, '!');
 console.log(res);
 
+str = 'ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ';
+res = str.replace(/[а-яА-ЯёЁ]/g, '!');
+console.log(res);
+
+str = 'aba aea aca aza axa a.a a+a a*a';
+res = str.replace(/a[.+*]a/g, '!');
+console.log(res);
+
+str = 'xaz x.z x3z x@z x$z xrz';
+res = str.replace(/x[^.@$]z/g, '!');
+console.log(res);
+str = 'xaz x.z x3z x@z x$z xrz 55 ...';
+res = str.replace(/[\d.]+/g, '!');
+console.log(res);
+
+str = 'x[]z x{}z x.z x()z';
+res = str.replace(/x[\[\]\{\}\(\)]+z/g, '!');
+console.log(res);
+
+
+str = '[abc] {abc} abc (abc) [abc]';
+res = str.replace(/[\[\{\(][a-z]+[\]\}\)]/g, '!');
+console.log(res);
