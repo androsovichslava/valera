@@ -99,3 +99,25 @@ console.log(newstr);
 str = 'ave a#a a2a a$a a4a a5a a-a aca';
 newstr = str.replace(/\s/g, "!")
 console.log(newstr);
+
+str = 'asa a#a a2a a$a a4a a5a a-a aa aca';
+newstr = str.replace(/a[a-z]*a/g, "!")
+console.log(newstr);
+
+str = 'xaz xbz x1z xСz';
+let res = str.replace(/x[^a-z]z/g, '!');
+console.log(res);
+
+str = '1a2 xbz x1z xСz 1s2';
+res = str.replace(/1[^e,x]2/g, '!');
+console.log(res);
+
+
+str = '1a2 xbz x1z xС2 1s2 xrrrr2';
+res = str.replace(/x[^A-Z]+?2/g, '!');
+console.log(res);
+
+str = '1a2 xbz x1z xС2 1s2 xrrrr2';
+res = str.replace(/x[^2-7]+2/g, '!');
+console.log(res);
+
