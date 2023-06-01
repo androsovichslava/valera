@@ -18,6 +18,22 @@ let obj = {
     'file3.txt': 'text3',
 }
 
-for (let key in obj) {
-    fs.writeFileSync(key, obj[key]);
-}
+// for (let key in obj) {
+//     fs.writeFileSync(key, obj[key]);
+// }
+
+// try {
+//     let text2 = fs.readFileSync("read2.me", "utf-8")
+// } catch (err) {
+//     console.log("ОШИБКА ЧТЕНИЯ ФАЙЛА \n\n\n", err)
+// }
+fs.readFile("read2.me", "utf-8", function (err, data) {
+    if (err) {
+        console.log("ОШИБКА ЧТЕНИЯ ФАЙЛА");
+        console.log(err)
+    }
+    if (data) {
+        console.log(data)
+    }
+})
+console.log("-------------------------------------------------")
