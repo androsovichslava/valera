@@ -1,5 +1,6 @@
 import { square } from "./maths.js"
 import fs from "fs"
+import { setTimeout } from "timers/promises";
 import _ from 'underscore';
 
 // let arr = [1, 2, 3, 4, 5, 6, 7];
@@ -63,16 +64,41 @@ import _ from 'underscore';
 //     console.log(data.split("").reduce((a, e) => Number(a) + Number(e), 0));
 // }).catch(err => console.log("ОШИБКА ЧТЕНИЯ", err))
 
-let names = ['file12.txt', 'file2.txt', 'file3.txt'];
-let files = [];
+// let names = ['file12.txt', 'file2.txt', 'file3.txt'];
+// let files = [];
 
-for (let name of names) {
-    files.push(fs.promises.readFile(name, "utf8"));
+// for (let name of names) {
+//     files.push(fs.promises.readFile(name, "utf8"));
+// }
+
+// Promise.all(files).then(data => {
+//     fs.promises.writeFile("res.txt", data.join("-"))
+//     console.log(data)
+// }).catch(err => {
+//     console.log("ОШИБКА ЧТЕНИЯ \n", err)
+// })
+
+async function func() {
+    try {
+        let names = ['file1.txt', 'file2.txt', 'file3.txt'];
+        let data = [];
+
+        for (let name of names) {
+            console.log("for");
+            data.push(await fs.promises.readFile(name, "utf8"));
+
+        }
+        console.log("after for")
+        await fs.promises.writeFile('res.txt', data.join(""));
+    } catch (err) {
+        console.log("error");
+    }
 }
 
-Promise.all(files).then(data => {
-    fs.promises.writeFile("res.txt", data.join("-"))
-    console.log(data)
-}).catch(err => {
-    console.log("ОШИБКА ЧТЕНИЯ \n", err)
-})
+func();
+
+import __dirname from './__dirname.js';
+console.log("Path  ", __dirname);
+
+import { constants } from 'fs';
+console.log(constants)

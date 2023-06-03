@@ -52,3 +52,15 @@ header p {
     margin-top: 10px;
     color: #999;
 }
+
+.select_block {
+    height: 20px;
+    width: 200px;
+    background-color: #aaa;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

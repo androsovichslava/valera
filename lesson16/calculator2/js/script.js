@@ -10,3 +10,36 @@ let body_select = document.querySelector("#body_select");
 let equipment_select = document.querySelector("#equipment_select");
 let mileage_input = document.querySelector("#mileage_input");
 
+let brand_list = Object.keys(cars);
+let option = document.createElement("option");
+option.setAttribute("value", "default");
+option.textContent = "Модель";
+
+// Добавляем option в select
+brand_select.appendChild(option);
+brand_list.forEach(elem => {
+    let option = document.createElement("option");
+    option.setAttribute("value", elem);
+    option.textContent = elem;
+
+    // Добавляем option в select
+    brand_select.appendChild(option);
+});
+brand_select.addEventListener("change", function (event) {
+    let option = document.createElement("option");
+    option.setAttribute("value", "default");
+    option.textContent = "Модель";
+
+    // Добавляем option в select
+    model_select.appendChild(option);
+    if (this.value) {
+        cars[this.value].forEach(elem => {
+            let option = document.createElement("option");
+            option.setAttribute("value", elem);
+            option.textContent = elem;
+
+            // Добавляем option в select
+            model_select.appendChild(option);
+        })
+    }
+})
