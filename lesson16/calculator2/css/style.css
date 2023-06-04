@@ -36,9 +36,10 @@ main {
 
 header {
     display: flex;
-    color: #aaa;
+    color: #888;
     flex-direction: column;
     padding: 10px;
+    background-color: lightgray;
 }
 
 header .title {
@@ -50,30 +51,32 @@ header .title {
 header p {
     font-size: 14px;
     margin-top: 10px;
-    color: #999;
+    /* color: #999; */
 }
 
 .select_block {
-
-    width: 200px;
-
-    margin: 10px;
-
+    flex-basis: 33%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 select,
 input {
     display: inline-block;
-    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 7px 10px;
     width: 200px;
+    border: #888 solid 1px;
 }
 
 select:disabled {
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: space-between;
+    /* border: 1px solid black; */
 }

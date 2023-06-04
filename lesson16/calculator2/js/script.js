@@ -14,7 +14,7 @@ let brand_list = Object.keys(cars);
 
 let option = document.createElement("option");
 option.setAttribute("value", "caption");
-option.textContent = "Бренд";
+option.textContent = "Марка";
 brand_select.appendChild(option);
 
 // Установка заголовка селекта Моделей
@@ -30,6 +30,35 @@ option.setAttribute("value", "caption");
 option.textContent = "Год выпуска";
 year_select.appendChild(option);
 year_select.setAttribute("disabled", "disabled");
+
+// Установка заголовка селекта Поколение
+option = document.createElement("option");
+option.setAttribute("value", "caption");
+option.textContent = "Поколение";
+generation_select.appendChild(option);
+generation_select.setAttribute("disabled", "disabled");
+
+// Установка заголовка селекта Модификация
+option = document.createElement("option");
+option.setAttribute("value", "caption");
+option.textContent = "Модификация";
+modification_select.appendChild(option);
+modification_select.setAttribute("disabled", "disabled");
+
+// Установка заголовка селекта Тип кузова
+option = document.createElement("option");
+option.setAttribute("value", "caption");
+option.textContent = "Тип кузова";
+body_select.appendChild(option);
+body_select.setAttribute("disabled", "disabled");
+
+// Установка заголовка селекта Уровень оснащения
+option = document.createElement("option");
+option.setAttribute("value", "caption");
+option.textContent = "Уровень оснащения";
+equipment_select.appendChild(option);
+equipment_select.setAttribute("disabled", "disabled");
+
 
 brand_list.forEach(elem => {
     let option = document.createElement("option");
