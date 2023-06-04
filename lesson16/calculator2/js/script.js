@@ -17,12 +17,19 @@ option.setAttribute("value", "caption");
 option.textContent = "Бренд";
 brand_select.appendChild(option);
 
-// let option = document.createElement("option");
+// Установка заголовка селекта Моделей
 option = document.createElement("option");
 option.setAttribute("value", "caption");
 option.textContent = "Модель";
 model_select.appendChild(option);
 model_select.setAttribute("disabled", "disabled");
+
+// Установка заголовка селекта Года выпуска
+option = document.createElement("option");
+option.setAttribute("value", "caption");
+option.textContent = "Год выпуска";
+year_select.appendChild(option);
+year_select.setAttribute("disabled", "disabled");
 
 brand_list.forEach(elem => {
     let option = document.createElement("option");
