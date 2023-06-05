@@ -30,7 +30,7 @@ main {
     margin-top: 40px;
     flex-direction: column;
     background-color: #fff;
-    height: 500px;
+    /* height: 500px; */
 
 }
 
@@ -61,11 +61,13 @@ header p {
 }
 
 select,
-input {
+input,
+.calculate {
     display: inline-block;
     font-size: 14px;
     border-radius: 4px;
     padding: 7px 10px;
+    margin: 0 10px;
     width: 200px;
     border: #888 solid 1px;
 }
@@ -77,6 +79,12 @@ select:disabled {
 form {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     align-content: space-between;
     /* border: 1px solid black; */
+    padding: 10px;
+}
+
+.calculate {
+    background-color: lightblue;
 }
